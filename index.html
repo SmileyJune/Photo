@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>重组照片</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	<body>
+		<section class="main" id="main">
+			<!--<img src="img/57b3c86080aa3.jpg" alt="" />-->
+		</section>
+	</body>
+</html>
+<script type="text/javascript">
+	var main=document.getElementById("main");
+	    var a=0;
+		var b=0;
+	console.log(newDiv);
+	var newDiv=new Array;
+	for(var i=0;i<90;i++){
+		
+//		console.log(i);
+		newDiv[i]=document.createElement("div");
+		newDiv[i].className="list1";
+		newDiv[i].style.backgroundPosition=-a*120+"px"+" "+b+"px";
+		main.appendChild(newDiv[i]);
+		a++;
+		if(a>=10&&a<20){b=b-75;a=0;}
+		newDiv[i].style.top=Math.random()*200+"px";
+		newDiv[i].style.left=Math.random()*1200-600+"px";
+		newDiv[i].style.opacity=0;
+	}
+    setTimeout(function(){
+    	for (var i=0;i<90;i++) {
+    		newDiv[i].style.top="0px";
+    	newDiv[i].style.left="0px";
+		newDiv[i].style.opacity=1;
+    	newDiv[i].style.transitionDelay=Math.random()*3+"s";
+    	}
+    	
+    },200)
+//	setTimeout(function(){
+//		main.innerHTML="<h2 style='color: #fff;font-size: 300px;'>帅不?</h2>"
+//		
+//	},6000)
+	
+	
+</script>
